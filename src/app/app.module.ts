@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 //Modulos
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
+//Services
+import { InfoPaginaService } from './services/info-pagina.service';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -11,6 +15,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
+
 
 @NgModule({
   declarations: [
@@ -23,9 +28,10 @@ import { ItemComponent } from './pages/item/item.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [InfoPaginaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
