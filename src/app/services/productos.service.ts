@@ -29,8 +29,6 @@ export class ProductosService {
               resolve();
             });
     });
-
-
   }
 
   /**
@@ -53,7 +51,6 @@ export class ProductosService {
     }else{
 
       this.filtrarProductos(texto);
-
     }
   }
 
@@ -72,7 +69,6 @@ texto: string   */
       if(prod.categoria.indexOf(texto) >= 0 || tituloLower.indexOf(texto) >= 0){
         this.productosFiltrado.push(prod);
       }
-
     });
 
   }

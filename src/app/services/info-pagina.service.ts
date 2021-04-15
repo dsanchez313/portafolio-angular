@@ -22,18 +22,18 @@ export class InfoPaginaService {
     //leer archivo JSON
     this._http.get('assets/data/data-pagina.json')
       .subscribe( (resp: InfoPagina) => {
+
         this.cargada = true;
         this.info = resp;
       })
-
   }
 
   private cargarEquipo(){
 
     this._http.get('https://angular-portafolio-307a7-default-rtdb.europe-west1.firebasedatabase.app/equipo.json')
       .subscribe((resp: any []) => {
+
         this.equipo = resp;
       })
   }
-
 }
