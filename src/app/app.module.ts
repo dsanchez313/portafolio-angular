@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 //Services
 import { InfoPaginaService } from './services/info-pagina.service';
+import { ProductosService } from './services/productos.service';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
 import { SearchComponent } from './pages/search/search.component';
+
 
 
 @NgModule({
@@ -33,7 +35,10 @@ import { SearchComponent } from './pages/search/search.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [InfoPaginaService],
+  providers: [
+    InfoPaginaService,
+    ProductosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
